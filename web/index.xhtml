@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    
+    <h:head>
+        <title>Search Flight</title>
+    </h:head>
+    <h:body>
+        <header> 
+            <h4>Search Flight</h4>
+        </header>   
+        <section>
+            <table>
+                <h:form id="flightSearch">
+                    <tr>
+                        <td colspan="4">
+                            Where and when do you want to travel?
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Leaving From
+                        </td>
+                        <td colspan="2">
+                            Going To
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <h:selectOneMenu id="leavingFrom" value="#{flightSearch.fromLocation}">
+                                <f:selectItems value="#{schedule.locations}"/>
+                            </h:selectOneMenu>
+                        </td>
+                    </tr>
+                </h:form>
+            </table>
+        </section>
+      
+      
+    </h:body>
+</html>
+
